@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,13 +31,16 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walk" translatesAutoresizingMaskIntoConstraints="NO" id="UnN-NV-kas">
                                                                 <rect key="frame" x="16" y="0.0" width="88.333333333333329" height="315.66666666666669"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49p-vY-8lJ" userLabel="ButtonWalk">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="49p-vY-8lJ" userLabel="ButtonWalk">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="315.66666666666669"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="walk">
                                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="0.0"/>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="selectedTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s8h-Jq-Fr4"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,11 +61,14 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run" translatesAutoresizingMaskIntoConstraints="NO" id="70u-5W-Xlx">
                                                                 <rect key="frame" x="16" y="0.0" width="88.333333333333329" height="315.66666666666669"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6M-vI-1VF" userLabel="ButtonRun">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6M-vI-1VF" userLabel="ButtonRun">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="315.66666666666669"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="run"/>
+                                                                <connections>
+                                                                    <action selector="selectedTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xfs-7d-zb7"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,11 +89,14 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exercise" translatesAutoresizingMaskIntoConstraints="NO" id="epI-5b-o5h">
                                                                 <rect key="frame" x="16" y="0.0" width="88.333333333333329" height="315.66666666666669"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-2s-hBv" userLabel="ButtonExercise">
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-2s-hBv" userLabel="ButtonExercise">
                                                                 <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="315.66666666666669"/>
                                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="exercise"/>
+                                                                <connections>
+                                                                    <action selector="selectedTime:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tIn-Pg-vaW"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,7 +133,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibf-M2-BId" userLabel="PlayButton">
                                                 <rect key="frame" x="0.0" y="36" width="361" height="56"/>
-                                                <color key="backgroundColor" red="0.21014038831242812" green="0.31217920938332755" blue="0.76859849691390991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.21176470588235294" green="0.31372549019607843" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="rEA-8g-yfA"/>
                                                 </constraints>
@@ -133,10 +143,13 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="handlePlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TU1-AO-sX4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcM-Vv-krZ" userLabel="PauseButton">
                                                 <rect key="frame" x="0.0" y="103.99999999999994" width="361" height="56"/>
-                                                <color key="backgroundColor" red="0.60195155878259676" green="0.46760796851761605" blue="0.00081055358714904834" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.59999999999999998" green="0.46666666666666667" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="Lvd-02-UzW"/>
                                                 </constraints>
@@ -145,10 +158,13 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="handlePause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBY-by-VEv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWH-X3-elS" userLabel="StopButton">
                                                 <rect key="frame" x="0.0" y="171.99999999999994" width="361" height="56"/>
-                                                <color key="backgroundColor" red="0.47113164085330383" green="0.010653827067634215" blue="0.066767526062825655" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.47058823529411764" green="0.011764705882352941" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="lfZ-2b-383"/>
                                                 </constraints>
@@ -157,6 +173,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="handleStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TcB-Iu-QCZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -176,7 +195,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.11094239010397729" blue="0.15682212752525249" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kaA-3f-Q4O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="67x-vz-Kh0"/>
                             <constraint firstItem="kaA-3f-Q4O" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DmC-vy-Ijv"/>
@@ -185,6 +204,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countText" destination="q15-0L-AOl" id="Xbr-ah-bHo"/>
+                        <outlet property="pauseButton" destination="BcM-Vv-krZ" id="4Q7-kE-Vbg"/>
+                        <outlet property="playButton" destination="ibf-M2-BId" id="2GE-ur-BJ5"/>
+                        <outlet property="stopButton" destination="GWH-X3-elS" id="L93-kw-Yuw"/>
                         <outletCollection property="outletButton" destination="ibf-M2-BId" collectionClass="NSMutableArray" id="Od0-LM-3JQ"/>
                         <outletCollection property="outletButton" destination="BcM-Vv-krZ" collectionClass="NSMutableArray" id="tKk-gk-3kh"/>
                         <outletCollection property="outletButton" destination="GWH-X3-elS" collectionClass="NSMutableArray" id="muH-D9-ehZ"/>
@@ -199,5 +222,8 @@
         <image name="exercise" width="512" height="512"/>
         <image name="run" width="512" height="512"/>
         <image name="walk" width="512" height="512"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.0" green="0.10980392156862745" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
